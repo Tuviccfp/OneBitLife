@@ -2,12 +2,14 @@ import React from "react";
 import { ScrollView, View, Text, Image, StyleSheet } from "react-native";
 import LifeStatus from "../../components/Common/LifeStatus";
 import DefaultButton from "../../components/Common/DefaultButton";
+import { useNavigation } from "@react-navigation/native";
+
 
 export default function Start() {
-  var count = -1;
+  const navigation = useNavigation();
+  
   const handleNavigationExplanation = () => {
-    count += 1
-    console.warn('Testando o clique', count)
+    navigation.navigate('AppExplanation')
   }
 
   return (
